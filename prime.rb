@@ -1,5 +1,5 @@
 ## Uncomment line 2 and lines 12-19 to use Benchmark testing
-# require'benchmark'
+require'benchmark'
 
 
 def prime?(number)
@@ -25,5 +25,3 @@ primes_to_100 = [2]
 Benchmark.measure{good_candidates.each do |can|
   primes_to_100 << can if prime?(can)
 end}
-
-
