@@ -22,9 +22,8 @@ good_candidates = ((3..99).select{|num| num.odd?}).to_a
 candidates = (1..100).to_a
 primes_to_100 = [2]
 
-good_candidates.each do |can|
+Benchmark.measure{good_candidates.each do |can|
   primes_to_100 << can if prime?(can)
-end
+end}
 
-puts primes_to_100.inspect
-puts [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97].inspect
+
