@@ -26,4 +26,4 @@ good_candidates.each do |can|
   primes_to_100 << can if prime?(can)
 end
 
-primes_to_100.inspect
+puts primes_to_100
