@@ -18,10 +18,7 @@ end
 # puts Benchmark.measure{prime?(104725)}
 # puts prime?(104725)
 
-good_candidates = ((3..104729).select{|num| num.odd?}).to_a
-candidates = (1..100).to_a
-primes_10000 = [2]
+puts Benchmark.measure{primes = ((3..104729).select{|num| prime?(num)}).to_a}
 
-puts Benchmark.measure{good_candidates.each do |can|
-  primes_10000 << can if prime?(can)
-end}
+
+
