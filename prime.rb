@@ -18,7 +18,7 @@ end
 # puts Benchmark.measure{prime?(104725)}
 # puts prime?(104725)
 
-good_candidates = ((3..99).select{|num| num.odd?}).to_a
+good_candidates = ((3..999).select{|num| num.odd?}).to_a
 candidates = (1..100).to_a
 primes_to_100 = [2]
 
